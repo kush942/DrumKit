@@ -1,6 +1,8 @@
 body {
 	text-align: center;
 	background-color: #283149;
+	margin: 0;
+	padding: 0 10px;
 }
 
 h1 {
@@ -8,11 +10,14 @@ h1 {
 	color: #dbedf3;
 	font-family: "Arvo", cursive;
 	text-shadow: 3px 0 #da0463;
+	margin-top: 20px;
+	margin-bottom: 30px;
 }
 
 footer {
 	color: #dbedf3;
 	font-family: sans-serif;
+	margin: 30px 0;
 }
 
 .w {
@@ -45,6 +50,11 @@ footer {
 
 .set {
 	margin: 10% auto;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;  /* Responsive wrap */
+	gap: 15px;        /* Gap between buttons */
+	max-width: 800px; /* max container width */
 }
 
 .game-over {
@@ -77,4 +87,41 @@ footer {
 	text-align: center;
 	margin: 10px;
 	background-color: white;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+	h1 {
+		font-size: 3.5rem;
+		margin-bottom: 20px;
+	}
+
+	.drum {
+		width: 120px;
+		height: 120px;
+		font-size: 3.5rem;
+		margin: 8px;
+		border-width: 8px;
+	}
+}
+
+@media (max-width: 480px) {
+	h1 {
+		font-size: 2.5rem;
+		margin-bottom: 15px;
+	}
+
+	.drum {
+		width: 90px;
+		height: 90px;
+		font-size: 2.5rem;
+		margin: 6px;
+		border-width: 6px;
+	}
+
+	.set {
+		margin: 5% auto;
+	}
 }
